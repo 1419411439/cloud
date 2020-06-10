@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-openfeign-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.xiezy.springcloud.service.PaymentFeignService: debug
